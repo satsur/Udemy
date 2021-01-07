@@ -23,24 +23,26 @@
 
     <script type="text/javascript">
     
-    if (typeof jQuery == "undefined") {
-      alert("Aww");
-    } else {
-      alert("Yay!!");
-    }
-    
-    $("button").click(function() {
-      
-      $("p").html("Hello?");
-      $("button").text("Hey");
-      
-      $("button").click(function() {
-        
-        $("p").html("Hey");
-      
-      });
-    });
-      
+//       if (typeof jQuery == "undefined") {
+//         alert("Aww");
+//       } else {
+//         alert("Yay!!");
+//       }
+
+      function myFunction() {
+        $("button").html("Hello?");
+        $("button").click(function() {
+
+          $("p").html("Hello?");
+          $("button").text("Hey");
+
+          $("button").click(function() {
+
+            $("p").html("Hey");
+              myFunction();
+          });
+        });
+      myFunction();
     </script>
     
   </body>
